@@ -358,9 +358,9 @@ The trial layout in Store 88 led to significant increases in total sales and tra
 
 **Targeting Mainstream Young Singles/Couples to Maximize Profits:**
 - <ins>_**Highlight strong brand preferences:**_</ins> This segment spends 69% more on Kettle than the second most-purchased brand, Doritos, showing a clear preference for Kettle. 
-- **_<ins>Promote larger pack sizes:**_</ins> Given that this segment is more likely to purchase larger packs like 380g/330g, focus on promoting bulk buying and the value associated with these larger sizes.
-- **_<ins>Introduce bundles or discounts:**_</ins> Offering discounts or bundles on larger packs will incentivize this segment to buy more, catering to their preference for bulk purchasing and value.
-- **_<ins>Emphasize premium brands:**_</ins> Their inclination towards Tyrells compared to the rest of the population suggests an opportunity to push this premium brand in larger sizes for a more profitable segment.
+- <ins>_**Promote larger pack sizes:**_</ins> Given that this segment is more likely to purchase larger packs like 380g/330g, focus on promoting bulk buying and the value associated with these larger sizes.
+- <ins>_**Introduce bundles or discounts:**_</ins> Offering discounts or bundles on larger packs will incentivize this segment to buy more, catering to their preference for bulk purchasing and value.
+- <ins>_**Emphasize premium brands:**_</ins> Their inclination towards Tyrells compared to the rest of the population suggests an opportunity to push this premium brand in larger sizes for a more profitable segment.
 
 
 These recommendations are based on segment-specific spending behavior and brand/size preferences, which offer targeted ways to enhance revenue and profitability by aligning offerings with customer tendencies.
@@ -370,17 +370,21 @@ These recommendations are based on segment-specific spending behavior and brand/
 ### Part 2: Trial Store Analysis
 ***Store 77:***
 The trial layout resulted in statistically significant increases in both customer numbers and total sales in at least two of the three trial months. Although transaction frequency per customer remained unchanged, the higher customer volume led to greater overall sales.
-**_<ins>Recommendation:**_</ins> Roll out the layout to similar stores where increasing customer footfall is a strategic goal.
+- <ins>_**Recommendation:**_</ins> Roll out the layout to similar stores where increasing customer footfall is a strategic goal.
+
+
 **Store 88:**
 The trial led to significant increases in transaction frequency and total sales, though the number of customers remained unchanged. This suggests improved shopping behavior among existing customers.
-**_<ins>Recommendation:**_</ins> Roll out the layout in stores aiming to deepen engagement and drive higher spend per customer.
+- <ins>_**Recommendation:**_</ins> Roll out the layout in stores aiming to deepen engagement and drive higher spend per customer.
+
+
 **Store 86:**
 There were no statistically significant differences in any KPI during the trial. Performance remained within the control store’s confidence interval throughout.
-**_<ins>Recommendation:**_</ins> Do not proceed with a rollout for trial store 86 layout at this stage. However, further investigation is recommended to understand the lack of impact. 
-**_<ins>Consider:**_</ins>
-- Whether the layout was implemented consistently.
-- Store-specific factors that may have limited the trial's effectiveness.
-- Gathering qualitative feedback (e.g. customer/staff input) to inform any adjustments.
+- <ins>_**Recommendation:**_</ins> Do not proceed with a rollout for trial store 86 layout at this stage. However, further investigation is recommended to understand the lack of impact. 
+- <ins>_**Consider:**_</ins>
+  - Whether the layout was implemented consistently.
+  - Store-specific factors that may have limited the trial's effectiveness.
+  - Gathering qualitative feedback (e.g. customer/staff input) to inform any adjustments.
 
 
 
