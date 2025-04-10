@@ -111,7 +111,7 @@ This section examines the revenue contribution from each LIFESTAGE and PREMIUM_C
 ![alt text](Images/Tot_sales.png)
 
 
-**Favorite Chip Brand for Top Contributor**
+**Favorite Brand for Top Contributor**
 
 - Kettle brand drives the biggest sales for budget older families.
 - Budget older families spend 48% more on Kettle brand than the second most purchased brand, Smiths.
@@ -170,7 +170,7 @@ A t-test confirmed significant differences among the top three spenders, adding 
 <img src="Images/high_paying.png" width="750" height="750">
 
 
-**Favorite Chip Brand for Top Contributors**
+**Favorite Brand for Top Contributors**
 
 - All three highest-paying segments purchase Kettle the most, followed by Dorito
 - Mainstream young singles/couples spend 69% more on Kettle than on Doritos, showing a strong brand preference.
@@ -220,38 +220,127 @@ When considering size preferences alongside brand choices, we observe:
 ## Part 2: Trial Store Analysis
 
 
-
-The Category Manager for chips has asked us to test the impact of the new trial layouts with a data driven recommendation to whether or not the trial layout should be rolled out to all their stores. Here, we will ecaluate the performance of a store trial which was performed in stores 77, 86 and 88 over the period 01-Feb-2019 - 30-Apr-2019.
+The Category Manager has asked us to test the impact of the new trial layouts with a data driven recommendation to whether or not the trial layout should be rolled out to all their stores. Here, we will ecaluate the performance of a store trial which was performed in stores 77, 86 and 88 over the period 01-Feb-2019 - 30-Apr-2019.
 
 
 ### Selcting Control Stores
 
+To evaluate the impact of the trial layout, we selected control stores that closely resembled each trial store in both sales trends and customer demographics prior to the trial period. The goal was to ensure any observed differences during the trial could be attributed to the layout change, rather than natural variation between stores.
 
-**Define Metric**
+**Method and KPIs for Selection**
+
+The control stores were selected using the following method:
+- The pre-trial period was defined as 01-Jul-2018 to 31-Jan-2019.
+- For each trial store, we compared all other stores based on the following metrics:
+  - Monlthy sales during the pre-trial period.
+  - Monthly number of customers.
+  - Monthly average transaction per customer.
+- A similarity score was calculated using an equal weighting of the Pearson correlation coefficient (to capture trend similarity) and a standardized distance metric (to assess absolute differences)
+- This score allowed us to identify the most appropriate control store for each trial store based on overall similarity across the selected KPIs.
+
+
+The highest score corresponding to each trial store is as follows:
+
+
+| Trial Store | Control Store |
+|-------------|---------------|
+| 77          |  233          |
+| 86          |  219          |
+| 88          |  237          |
+
+
+Below, we present a comparison of the selected KPIs between each trial store and its matched control store during the pre-trial period. This highlights the degree of alignment prior to the trial and supports the validity of our control selection.
+
+
+
+<img src="Images/pretrial_sales.png" width="950" height="475">
+
+---
+
+<img src="Images/pretrial_customers.png" width="950" height="475">
+
+---
+
+<img src="Images/pretrial_transactions.png" width="950" height="475">
+
+---
 
 
 ### Assessment of the Trial
 
+**Statistical Testing for Significance**
 
-**Total Monthly Sales**
+To determine whether the differences in performance between trial and control stores were statistically significant during the trial period, we used the following method:
+1. **Scale Alignment:**
+   For each KPI, we calculated a scale factor by dividing the total pre-trial metric of the trial store by that of the control store. This ensured the two stores were on a comparable scale.
+2. **Percentage Difference Calculation:**
+   For each month, we computed the percentage difference between the trial and control store KPIs, scaled appropriately.
+3. **Estimate of Variability:**
+   We calculated the standard deviation of the monthly percentage differences over the pre-trial period. This served as our estimate of normal variation.
+4. **t-Statistic Computation:**
+  During the trial period, we computed the average percentage difference and then calculated a t-value using:
 
-
-
-**Monthly Customers**
-
-
-
-**Monthly Transactions per Customer**
-
-
-
-
-
+$t = \frac{\text{Percent\ difference of trial period}}{ \text{std. dev. of pre-trial diffs}}$
 
 
+6. **t-Critical Threshold:**
+   We obtained the t-critical value for a 95% confidence level, with degrees of freedom equal to the number of pre-trial months minus one.
+7. **Statistical Significance:**
+  If the absolute t-value exceeded the critical threshold, we concluded that the difference in performance during the trial was statistically significant.
 
 
+**Store 77**
 
+Monthly total sales indicate that the trial layout in Store 77 performed significantly better than its control store during the trial period, with sales falling outside the 5% to 95% confidence interval in two out of the three trial months.
+
+<img src="Images/77sales.png" width="950" height="475">
+
+The number of customers is significantly higher in two of the three months. This seems to suggest that the trial had a significant impact on increasing the number of customers in trial store 77.
+
+
+<img src="Images/77customers.png" width="950" height="475">
+
+The results show the average number of transactions per customers in the trial store 77 is not significantly different to its control store in the trial period as the trial store performance lies inside the 5% to 95% confidence interval of the control store in all three trial months.
+
+<img src="Images/77transactions.png" width="950" height="475">
+
+The trial layout in store 77 resulted in significant increases in the number of customers and total sales in at least two of the three trial months. However, there was no significant change in the average number of transactions per customer. This suggests that the layout was effective in attracting more customers, but it did not lead to more frequent purchases among existing ones. The overall boost in sales during the trial period was therefore likely driven by increased foot traffic rather than changes in purchasing behavior.
+
+---
+
+**Store 86**
+
+The monthly total sales show that the trial layout in store 86 is not significantly different to its control store in the trial period as the trial store total sales performance lies indside the 5% to 95% confidence interval of the control store in all three trial months.
+
+<img src="Images/86sales.png" width="950" height="475">
+
+Monthly number of customers also stayed within the confidence interval, showing no significant deviation from the control
+
+<img src="Images/86customers.png" width="950" height="475">
+
+Average transactions per customer followed a similar trend, with performance consistently within the confidence bounds
+
+<img src="Images/86transactions.png" width="950" height="475">
+
+The trial layout implemented in store 86 did not lead to any statistically significant differences in customer behavior or sales outcomes compared to its matched control store.
+
+---
+
+**Store 88**
+
+The monthly total sales show that the trial layout in store 88 lead to significantly higher total sales compared to its control store in the trial period as the trial store performance lies outside the 5% to 95% confidence interval of the control store in two of the three trial months.
+
+<img src="Images/88sales.png" width="950" height="475">
+
+The results show the number of customers in trial store 88 is not significantly different to its control store in the trial period as the trial store performance lies inside the 5% to 95% confidence interval of the control store in two of the three trial months.
+
+<img src="Images/88customers.png" width="950" height="475">
+
+The results show the average number of transactions per customers in the trial store 88 is significantly higher to its control store in the trial period as the trial store performance lies inside the 5% to 95% confidence interval of the control store in two of the three trial months.
+
+<img src="Images/88transactions.png" width="950" height="475">
+
+The trial layout in Store 88 led to significant increases in total sales and transactions per customer in at least two of the three trial months. However, there was no significant change in the number of customers. This suggests that while the layout did not attract new customers, it effectively encouraged existing customers to purchase more frequently, resulting in higher overall sales during the trial period.
 
 
 
@@ -259,17 +348,45 @@ The Category Manager for chips has asked us to test the impact of the new trial 
 ---
 ## 5. Recommendations
 
-**To increase revenue and cater to Budget Older Families:**
-- Focus on promotions for larger, premium-sized packets like Grain Waves and Kettle, which align with this segment’s preferences.
-- Highlight value for money in premium products to attract this high-contribution segment.
+### Part 1. Customer Segmentation Insights
+
+**Targeting Budget Older Families for Revenue Growth:**
+- <ins>_**Leverage brand preferences:**_</ins> This segment spends 48% more on Kettle than the second most-purchased brand, indicating a strong preference for this premium brand.
+- <ins>_**Focus on medium to small-sized, affordable packs:**</ins>_ This segment is more likely to purchase medium to smaller packs, likely due to their focus on affordability. Promoting more affordable pack sizes will cater to their preferences effectively.
+- <ins>_**Encourage variety in smaller pack sizes:**</ins>_ This segment is 26% more likely to purchase RRD than the rest of the population, showing a preference for this brand as well. Positioning RRD in medium to small pack sizes could be an attractive offering for them.
 
 
-**To maximize profits with Mainstream Young Singles/Couples:**
-- Promote larger pack sizes of popular brands like Smiths, Twisties, Cheezels, and Doritos while maintaining a strong focus on premium brands like Kettle and Tyrells.
-- Create bundles or discounts on larger pack sizes to further incentivize purchases.
+**Targeting Mainstream Young Singles/Couples to Maximize Profits:**
+- <ins>_**Highlight strong brand preferences:**_</ins> This segment spends 69% more on Kettle than the second most-purchased brand, Doritos, showing a clear preference for Kettle. 
+- **_<ins>Promote larger pack sizes:**_</ins> Given that this segment is more likely to purchase larger packs like 380g/330g, focus on promoting bulk buying and the value associated with these larger sizes.
+- **_<ins>Introduce bundles or discounts:**_</ins> Offering discounts or bundles on larger packs will incentivize this segment to buy more, catering to their preference for bulk purchasing and value.
+- **_<ins>Emphasize premium brands:**_</ins> Their inclination towards Tyrells compared to the rest of the population suggests an opportunity to push this premium brand in larger sizes for a more profitable segment.
+
+
+These recommendations are based on segment-specific spending behavior and brand/size preferences, which offer targeted ways to enhance revenue and profitability by aligning offerings with customer tendencies.
+
+
+
+### Part 2: Trial Store Analysis
+***Store 77:***
+The trial layout resulted in statistically significant increases in both customer numbers and total sales in at least two of the three trial months. Although transaction frequency per customer remained unchanged, the higher customer volume led to greater overall sales.
+**_<ins>Recommendation:**_</ins> Roll out the layout to similar stores where increasing customer footfall is a strategic goal.
+**Store 88:**
+The trial led to significant increases in transaction frequency and total sales, though the number of customers remained unchanged. This suggests improved shopping behavior among existing customers.
+**_<ins>Recommendation:**_</ins> Roll out the layout in stores aiming to deepen engagement and drive higher spend per customer.
+**Store 86:**
+There were no statistically significant differences in any KPI during the trial. Performance remained within the control store’s confidence interval throughout.
+**_<ins>Recommendation:**_</ins> Do not proceed with a rollout for trial store 86 layout at this stage. However, further investigation is recommended to understand the lack of impact. 
+**_<ins>Consider:**_</ins>
+- Whether the layout was implemented consistently.
+- Store-specific factors that may have limited the trial's effectiveness.
+- Gathering qualitative feedback (e.g. customer/staff input) to inform any adjustments.
+
 
 
 
 ---
 ## 6. Clarifying Questions, Assumptions & Caveats
+
+
 
